@@ -81,23 +81,29 @@ function changeProducts() {
 	        	$("#operand2-bubble").animate({top:100});
 	        	$("#operand2-bubble").fadeIn(); 
 
+                //the same principle is applied here to creat the illusion of 
+                //flying away divs like in the above case
 	        	$("#result-bubble").animate({top:-600},{duration:5000});
         		$("#result-bubble").fadeOut();
 	        	$("#result-bubble").animate({top:100});
 	        	$("#result-bubble").fadeIn();    
 
+                //the same principle is applied here to creat the illusion of 
+                //flying away divs like in the above case
 	        	$("#result-bubble1").animate({top:-700},{duration:5000});
         		$("#result-bubble1").fadeOut();
 	        	$("#result-bubble1").animate({top:200});
 	        	$("#result-bubble1").fadeIn(); 
 
+                //the same principle is applied here to creat the illusion of 
+                //flying away divs like in the above case
 	        	$("#result-bubble2").animate({top:-900},{duration:5000});
         		$("#result-bubble2").fadeOut();
 	        	$("#result-bubble2").animate({top:300});
 	        	$("#result-bubble2").fadeIn(); 
 
 
-
+                //not yet working :))))
                 $("#operand1-bubble").click(function() {
                 $(this).stop(false, true, false);
                 $(this).hide("explode", {
@@ -112,10 +118,10 @@ function changeProducts() {
 
 $(document).ready(function () {   
 
-    //call the changeProducts function in 1 second so 
+    //call the changeProducts function in 1 second 
     //but the if condition that check if the animation has ended or not
-    //will let the other code to get executed unless the whole animation is
-    //completed which happens every 5 seonds. 
+    //will not let the other code to get executed unless the whole animation is
+    //completed, which happens every 5 seonds. 
     t = setInterval(changeProducts, 1000);	
 });
 
